@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import Numbers from "./Components/Numbers";
+import Screen from "./Components/Screen";
+import Lastcolumb from "./Components/Lastcolumb";
+import Firstrow from "./Components/Firstrow";
+import { useState } from "react";
+import "./App.css";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  const [selectedNumber, setSelectedNumber] = useState("")
+
+  
+  const handleClick = (value) => {
+    if(value == '='){
+      console.log('=')
+      let data = eval(selectedNumber)
+      setSelectedNumber(data)
+      return
+    }
+    setSelectedNumber((prev) => prev + value); 
+  };
+
+  const handlefirstRow = (value) => {
+    // console.log(value); 
+    if (value === "AC") {
+      setSelectedNumber((prev) => prev.slice(0, -1) || "0"); // Removes last digit
+    } else if (value === "DEL") {
+      setSelectedNumber(""); 
+    }else{
+      let data = value + '/'
+      setSelectedNumber((prev)=> prev+'/')
+    }
+  }
+
+  
+
+  return (          
+    <div className="container" id="container">
+      <Screen value={selectedNumber} />
+      <Firstrow  onfirstRowClick={handlefirstRow} />
+      <div className="same" id="same"  >
+        <Numbers onNumberClick={handleClick} />
+        <Lastcolumb onLastColumbClick = {handleClick} />
+      </div>
     </div>
   );
 }

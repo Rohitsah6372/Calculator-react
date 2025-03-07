@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* General Container */
+.container {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Screen */
+  .screen {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Button Styles */
+  button {
+    width: 70px;
+    height: 50px;
+    font-size: 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
   }
-}
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Number Buttons */
+  .one, .two, .three,
+  .four, .five, .six,
+  .seven, .eight, .nine,
+  .zero, .point {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Operator Buttons */
+  .mul, .diff, .sum, .divide, .equals {
+    background-color: #ff9800;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Clear & Delete Buttons */
+  .ac {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .del {
+    background-color: #5bc0de;
+    color: white;
+  }
+  
