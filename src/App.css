@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #c9ea99;
+}
+
+.container{
+    position: absolute;
+    top: 15%;
+    left: 39%;
+    height: 400px;
+    width: 300px;
+    border: 2px solid #000;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #cd6161;
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin: 2px;
+    background-color: rgb(166, 174, 181);
+    height: 80%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #dbe382;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.item:hover{
+    background-color: #50b13c;
+    color: #000;
+}
